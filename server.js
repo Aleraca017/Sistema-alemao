@@ -48,6 +48,14 @@ app.post('/api/criar-pagamento', async (req, res) => {
   }
 });
 
+// Rota para a página inicial
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>Bem-vindo ao Sistema de Pagamento PIX</h1>
+    <p>Acesse <a href="/api/criar-pagamento">/api/criar-pagamento</a> para criar pagamentos via PIX.</p>
+  `);
+});
+
 // Inicia o servidor
 const PORT = 3000;
 app.listen(PORT, () => {
