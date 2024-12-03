@@ -8,7 +8,7 @@ app.use(express.json());
 // Configura o middleware CORS
 app.use(
   cors({
-    origin: 'http://127.0.0.1:5500', // Permite apenas requisições do frontend na origem especificada
+    origin: ['http://127.0.0.1:5500', 'https://aleraca017.github.io'], // Permite apenas requisições do frontend na origem especificada
   })
 );
 
