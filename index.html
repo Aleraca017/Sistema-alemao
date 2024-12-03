@@ -26,7 +26,7 @@
   }
 
   try {
-    const response = await fetch('http://localhost:3000/api/criar-pagamento', {
+    const response = await fetch('https://sistema-alemao.onrender.com/api/criar-pagamento', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ value: parseFloat(valor) }), // Envia o valor ao backend
@@ -45,7 +45,7 @@
     qrCodeContainer.innerHTML = `
       <h3>QR Code Gerado:</h3>
       <img src="data:image/png;base64,${data.encodedImage}" alt="QR Code PIX" />
-      <p>Valor: R$ ${data.value}</p>
+      <p>Valor: R$ ${valor}</p>
       <p>Código: ${data.payload}</p>
     `;
   } catch (err) {
